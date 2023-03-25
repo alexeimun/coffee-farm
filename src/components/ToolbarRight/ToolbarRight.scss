@@ -1,0 +1,76 @@
+.bottom-right-toolbar-container {
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  min-width: 400px;
+  border-top: #6a5039;
+  border-top-width: 2px;
+  border-top-style: solid;
+  color: #fff;
+  height: 70px;
+  background-color: #b59661;
+  line-height: 30px;
+  box-sizing: border-box;
+  border-top-left-radius: 7px;
+  .toolbar-top {
+    width: 100%;
+    background: #755a3d;
+    height: 14px;
+    position: relative;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #806341;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .toolbar-top {
+    border-top-left-radius: 5px;
+  }
+  .toolbar-items {
+    height: 60px;
+    display: flex;
+    border: 4px #6a5039 solid;
+    border-left: none;
+    border-right: none;
+    .toolbar-item {
+      cursor: pointer;
+      margin-left: 20px;
+      align-items: center;
+      padding: 5px;
+      image-rendering: pixelated;
+      position: relative;
+      & > img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.build-menu-popup {
+  position: absolute;
+  left: 10px;
+  bottom: 90px;
+  min-width: 300px;
+  color: #fff;
+  height: 500px;
+  padding: 0.8em;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+.placeable-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+
+.time {
+  color: #6a5039;
+}

@@ -1,0 +1,88 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+  "rules": {
+    //react rules
+    "react/no-array-index-key": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "warn",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "react/jsx-max-props-per-line": [1, { "maximum": 1, "when": "multiline" }],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }], // Make ESLint happy about JSX inside of tsx files
+    "react/jsx-no-target-blank": "off", //  target="_blank" without rel="noreferrer" is a security risk: see https://html.spec.whatwg.org/multipage/links.html#link-type-noopener  react/jsx-no-target-blank
+    "react/prop-types": "off",
+    "react/require-default-props": "off", 
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/anchor-is-valid": "off", 
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "warn",
+      {
+        "controlComponents": ["Select"],
+        "assert": "either",
+        "depth": 3
+      }
+    ],
+    // js rules
+    "lines-between-class-members": "off",
+    "no-plusplus": "off",
+    "no-console": "warn",
+    "no-undef": "off",
+    "no-unexpected-multiline": "error",
+    "import/no-extraneous-dependencies": "off",
+    "prefer-destructuring": "error",
+    "no-param-reassign": "off",
+    "no-use-before-define": "off",
+    "no-useless-escape": "off",
+    // Disabled old no-shadow rule as seems to be communicated by ESLint while working with TS.
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "import/prefer-default-export": "off", // cannot control what we import from standard libs
+    "import/no-unresolved": "off", // typescript
+    "require-yield": "off", // don"t micromanage sagas or side effects
+    "import/extensions": "off", // don"t micromanage pretty imports
+    "no-unused-expressions": "off", // prevents basic use of React exports such as in App.tsx
+    "arrow-body-style": ["warn", "as-needed"], // warn
+    "dot-notation": "off", // required for our env variables currently
+    "prefer-const": "warn",
+    "no-nested-ternary": "warn", // warn
+    "consistent-return": "off", // warn. Look at api calls closely before enabling this. api.ts.
+    // prettier rules
+    "prettier/prettier": [
+      "error",
+      {
+        "bracketSpacing": true,
+        "singleQuote": true,
+        "arrowParens": "avoid",
+        "endOfLine": "lf",
+        "htmlWhitespaceSensitivity": "ignore",
+        "printWidth": 120,
+        "quoteProps": "as-needed",
+        "semi": true,
+        "tabWidth": 2,
+        "trailingComma": "es5",
+        "useTabs": false,
+        "bracketSameLine": false
+      }
+    ]
+  },
+  "ignorePatterns": ["package.json", "./node_modules", "./dist", "**/dist/*.js", "*css", "*scss", "*svg"]
+}

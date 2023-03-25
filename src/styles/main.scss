@@ -1,0 +1,56 @@
+@import "./interface.scss";
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/PressStart2P-Regular.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  font-family: "Press Start 2P", regular;
+}
+
+canvas {
+  image-rendering: pixelated;
+  background: #111;
+}
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.hidden {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b59661;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #806341;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #73593b;
+}

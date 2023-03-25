@@ -1,0 +1,21 @@
+.sidebar-container {
+  display: flex;
+  position: absolute;
+  right: 8px;
+  top: 20px;
+  min-width: 300px;
+  color: #fff;
+  height: calc(100% - 200px);
+  min-height: 80%;
+  padding: 1em;
+  line-height: 30px;
+  box-sizing: border-box;
+  align-items: center;
+  .close-sidebar {
+    position: absolute;
+    font-size: 1.5em;
+    right: 12px;
+    top: 0;
+    cursor: pointer;
+  }
+}

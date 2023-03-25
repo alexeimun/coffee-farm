@@ -1,0 +1,8 @@
+.placeable-item {
+  align-items: center;
+  cursor: pointer;
+  img {
+    image-rendering: pixelated;
+    width: 90px;
+  }
+}
